@@ -12,8 +12,8 @@ pipeline {
             steps {
                 // Copy static files to the web directory
                 sh '''
-                sudo cp -r * /var/www/html/
-                sudo chown -R www-data:www-data /var/www/html/
+                cp -r * /var/www/html/
+                chown -R www-data:www-data /var/www/html/
                 '''
             }
         }
