@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    
+
     stages {
         stage('Checkout') {
             steps {
@@ -10,10 +10,9 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                // Copy static files to the web directory
+                // Copy static files to the appropriate directory
                 sh '''
                 cp -r * /var/www/html/
-                chown -R www-data:www-data /var/www/html/
                 '''
             }
         }
